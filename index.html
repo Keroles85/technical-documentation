@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar Section -->
+
+  <nav id="navbar">
+    <header><h1>jQuery Documentation</h1></header>
+    <ul>
+      <li><a href="#jQuery_Introduction" class="nav-link">jQuery Introduction</a></li>
+      <li><a href="#jQuery_Hide/Show" class="nav-link">jQuery Hide/Show</a></li>
+      <li><a href="#jQuery_Callback" class="nav-link">jQuery Callback</a></li>
+      <li><a href="#jQuery_Get" class="nav-link">jQuery Get</a></li>
+      <li><a href="#jQuery_Set" class="nav-link">jQuery Set</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+
+  <main id="main-doc">
+
+    <!-- jQuery Introduction Section -->
+
+    <section class="main-section" id="jQuery_Introduction">
+      <header>
+        <h2>jQuery Introduction</h2>
+      </header>
+      <article>
+        <p class="artPara">
+          The purpose of jQuery is to make it much easier to use JavaScript on your website.
+        </p>
+        <h3>What is jQuery?</h3>
+        <p class="artPara">
+          jQuery is a lightweight, "write less, do more", JavaScript library.
+          The purpose of jQuery is to make it much easier to use JavaScript on your website.
+          jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+          jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.\
+          The jQuery library contains the following features:
+          <ul>
+            <li>HTML/DOM manipulation</li>
+            <li>CSS manipulation</li>
+            <li>HTML event methods</li>
+            <li>Effects and animations</li>
+            <li>AJAX</li>
+            <li>Utilities</li>
+          </ul>
+        </p>
+      </article>
+    </section>
+
+    <!-- jQuery Hide/Show Section -->
+
+    <section class="main-section" id="jQuery_Hide/Show">
+      <header>
+        <h2>jQuery Hide/Show</h2>
+      </header>
+      <article>
+        <h3>jQuery hide() and show()</h3>
+        <p class="artPara">
+          With jQuery, you can hide and show HTML elements with the hide() and show() methods:
+        </p>
+        <p class="artPara">
+          Example: 
+<code>
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  
+  $("#show").click(function(){
+    $("p").show();
+  });
+</code>
+        </p>
+        <h3>jQuery toggle()</h3>
+        <p class="artPara">
+          You can also toggle between hiding and showing an element with the toggle() method.
+          Shown elements are hidden and hidden elements are shown:
+        </p>
+        <p class="artPara">
+          Example:
+<code>
+  $("button").click(function(){
+    $("p").toggle();
+  });
+</code>
+        </p>
+      </article>
+    </section>
+
+    <!-- jQuery Callback Section -->
+
+    <section class="main-section" id="jQuery_Callback">
+      <header>
+        <h2>jQuery Callback</h2>
+      </header>
+      <article>
+        <p class="artPara">
+          JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.
+          To prevent this, you can create a callback function.
+          A callback function is executed after the current effect is finished.
+          Typical syntax: <code>$(selector).hide(speed,callback);</code>
+        </p>
+        <p class="artPara">
+          Example: 
+<code>
+  $("button").click(function(){
+    $("p").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+</code>
+        </p>
+      </article>
+    </section>
+
+    <!-- jQuery Get Secion -->
+
+    <section class="main-section" id="jQuery_Get">
+      <header>
+        <h2>jQuery Get</h2>
+      </header>
+      <article>
+        <h3>jQuery DOM Manipulation</h3>
+        <p class="artPara">
+            One very important part of jQuery is the possibility to manipulate the DOM.
+            jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes.
+        </p>
+        <h3>Get Content - text(), html(), and val()</h3>
+        <p class="artaPara">
+          Three simple, but useful, jQuery methods for DOM manipulation are:
+
+          <ul>
+            <li>text() - Sets or returns the text content of selected elements</li>
+            <li>html() - Sets or returns the content of selected elements (including HTML markup)</li>
+            <li>val() - Sets or returns the value of form fields</li>
+          </ul>
+
+          The following example demonstrates how to get content with the jQuery text() and html() methods:
+        </p>
+        <p class="artPara">
+          Example:
+<code>
+    $("#btn1").click(function(){
+      alert("Text: " + $("#test").text());
+    });
+    $("#btn2").click(function(){
+      alert("HTML: " + $("#test").html());
+    });
+</code>
+        </p>
+      </article>
+    </section>
+
+    <!-- jQuery Set Section -->
+
+    <section class="main-section" id="jQuery_Set">
+      <header>
+        <h2>jQuery Set</h2>
+      </header>
+      <article>
+        <h3>Set Content - text(), html(), and val()</h3>
+        <p class="artPara">
+          We will use the same three methods from the previous page to set content:
+          <ul>
+            <li>text() - Sets or returns the text content of selected elements</li>
+            <li>html() - Sets or returns the content of selected elements (including HTML markup)</li>
+            <li>val() - Sets or returns the value of form fields</li>
+          </ul>
+        </p>
+        <p class="artPara">
+          Example:
+<code>
+    $("#btn1").click(function(){
+      $("#test1").text("Hello world!");
+    });
+    $("#btn2").click(function(){
+      $("#test2").html("<b>Hello world!</b>");
+    });
+    $("#btn3").click(function(){
+      $("#test3").val("Dolly Duck");
+    });
+</code>
+        </p>
+      </article>
+    </section>
+
+  </main>
+</body>
+</html>
